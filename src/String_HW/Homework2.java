@@ -21,6 +21,10 @@ public class Homework2 {
         double accBalance = 32850.76;
         System.out.println("Balance in the account is "+accBalance);
 
+        boolean sunRiseWest = false;
+        boolean sunRiseEast = true;
+        System.out.println("Does the sun rises from the west? "+ false);
+
         char firstName = 'V';
         char lastName = 'S';
         System.out.println("Initials of my name "+firstName+lastName);
