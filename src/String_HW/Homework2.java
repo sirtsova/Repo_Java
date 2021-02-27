@@ -22,8 +22,7 @@ public class Homework2 {
         System.out.println("Balance in the account is "+accBalance);
 
         boolean sunRiseWest = false;
-        boolean sunRiseEast = true;
-        System.out.println("Does the sun rises from the west? "+ false);
+        System.out.println("Does the sun rises from the west? "+ sunRiseWest);
 
         char firstName = 'V';
         char lastName = 'S';
