@@ -28,5 +28,6 @@ public class Homework2 {
         char lastName = 'S';
         System.out.println("Initials of my name "+firstName+lastName);
 
+
     }
 }
