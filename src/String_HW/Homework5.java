@@ -84,7 +84,7 @@ public class Homework5 {
             System.out.print(upperCaseZeroIndexChar);
             if (i==arrOfWords2.length-1){
                 break;
-                }
+            }
 
         }
         System.out.println(" ");
@@ -96,9 +96,8 @@ public class Homework5 {
         String sentence_4 = "We all are here to learn good stuff";
         String[] arraySentence_4= sentence_4.trim().split(" ");
         System.out.println(arraySentence_4.length);
-        }
-
-
     }
 
+
+}
 
