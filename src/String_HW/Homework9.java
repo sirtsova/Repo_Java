@@ -1,5 +1,7 @@
 package String_HW;
 
+import java.util.Arrays;
+
 public class Homework9 {
     public static void main(String[] args) {
         /**
@@ -13,6 +15,8 @@ public class Homework9 {
         /**
          * Write a method that will reverse any given int-array
          */
+        int[] intArray = {66,876,65,34,987,343,21};
+        System.out.println(Arrays.toString(reverseIntArr(intArray)));
         /**
          * Write a method that return the number of words in given sentence.
          */
@@ -50,7 +54,14 @@ public class Homework9 {
         }
         return studentGrade;
     }
+public static int[] reverseIntArr (int[] intArray) {
+    int[] reversedArray = new int[intArray.length];
+    for (int i = 0; i < intArray.length; i++) {
+        reversedArray[i] = intArray[intArray.length - 1 - i];
 
+    }
+    return reversedArray;
+}
     public static int numberOfWords (String sentence_2) {
        String[] arrSentence = sentence_2.trim().split(" ");
        int count =0;
