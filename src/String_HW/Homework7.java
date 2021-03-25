@@ -21,9 +21,10 @@ public class Homework7 {
             String remainingLetters = words.substring(1);
             String sentenceModified = firstLetter.concat(remainingLetters+ " ");
             sentence1 = sentence1+ sentenceModified;
-               System.out.print(sentence1);
+
 
             }
+        System.out.print(sentence1);
 
 
 
