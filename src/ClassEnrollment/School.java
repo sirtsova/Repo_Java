@@ -19,8 +19,11 @@ public class School {
 
 
         s1.enrollStudent("Happy", "NY", "PM");
-        s1.updateCourse("web");
-Students.displaySchoolSummary();
+
+        Students.displaySchoolSummary();
+        System.out.println(s1.getFeesForCourse(s1.studentEnrolledCourse));
+        System.out.println("\n\n");
+        s1.toChangeCourse("PM");
         /*
     static int totalStudents = 1;
 

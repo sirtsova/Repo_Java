@@ -99,19 +99,33 @@ public class Students {
      * 3. Show error (saying, Invalid course entered) if student enter a course not offered by school
      */
 
-    public void updateCourse (String newCourseName) {
-          for (int i = 0; i < offeredCourses.length; i++) {
-             if (offeredCourses[i].equalsIgnoreCase(newCourseName) && !(newCourseName.equalsIgnoreCase(studentEnrolledCourse))) {
-                    studentFeeBalance = feesCourses[i] - studentFeeBalance;
-                    System.out.println(studentFeeBalance);
-                }
-                if (newCourseName.equalsIgnoreCase(studentEnrolledCourse)) {
+    public double getFeesForCourse (String studentEnrolledCourse) {
+        double feesForCourse =0;
+         for (int i=0; i<offeredCourses.length; i++) {
+              if (offeredCourses[i].equalsIgnoreCase(studentEnrolledCourse)) {
+                 feesForCourse = feesCourses[i];
+              }
+          }
+          return feesForCourse;
+        }
+
+
+        public void toChangeCourse (String newCourseName) {
+        for (int i=0; i<offeredCourses.length; i++) {
+            if(offeredCourses[i].equalsIgnoreCase(newCourseName)) {
+                if(newCourseName.equalsIgnoreCase(studentEnrolledCourse)) {
                     System.out.println("Same course entered");
-                } else {
-                    System.out.println("Invalid course entered");
+                } if (!(newCourseName.equalsIgnoreCase(studentEnrolledCourse))) {
+                    double previouseFee = getFeesForCourse(studentEnrolledCourse);
+                    studentFeeBalance = feesCourses[i] - previouseFee;
+                    System.out.println("Your course has been changed to "+newCourseName + ". Your current balance is " +studentFeeBalance);
                 }
+            } if (!(newCourseName.equalsIgnoreCase(offeredCourses[i]))) {
+                System.out.println("Invalid course entered");
+            }
             }
         }
+
 
 
 
