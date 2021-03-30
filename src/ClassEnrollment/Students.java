@@ -16,7 +16,7 @@ public class Students {
      * student address
      */
     static String schoolName = "ABC School";
-    static String[] offeredCourses = {"QA", "Web", "PM"};
+    static String[] offeredCourses = {"QA", "Web", "PM","Database"};
     static double[] feesCourses = {1000, 2000, 3000};
     static int totalStudents = 0;
 
@@ -111,20 +111,33 @@ public class Students {
 
 
         public void toChangeCourse (String newCourseName) {
+        newCourseName=newCourseName.trim();
+        int count = 0;
         for (int i=0; i<offeredCourses.length; i++) {
-            if(offeredCourses[i].equalsIgnoreCase(newCourseName)) {
                 if(newCourseName.equalsIgnoreCase(studentEnrolledCourse)) {
                     System.out.println("Same course entered");
-                } if (!(newCourseName.equalsIgnoreCase(studentEnrolledCourse))) {
+                    break;
+                } if (offeredCourses[i].equalsIgnoreCase(newCourseName) && !(newCourseName.equalsIgnoreCase(studentEnrolledCourse))) {
                     double previouseFee = getFeesForCourse(studentEnrolledCourse);
                     studentFeeBalance = feesCourses[i] - previouseFee;
                     System.out.println("Your course has been changed to "+newCourseName + ". Your current balance is " +studentFeeBalance);
-                }
-            } if (!(newCourseName.equalsIgnoreCase(offeredCourses[i]))) {
-                System.out.println("Invalid course entered");
+                    break;
+                } if (!(offeredCourses[i].equalsIgnoreCase(newCourseName))) {
+                     count++;
+                       if (count==offeredCourses.length) {
+                           System.out.println("Invalid course entered");
+                           break;
+                       }
+                         }
             }
             }
-        }
+
+
+
+
+
+
+
 
 
 

@@ -23,7 +23,7 @@ public class School {
         Students.displaySchoolSummary();
         System.out.println(s1.getFeesForCourse(s1.studentEnrolledCourse));
         System.out.println("\n\n");
-        s1.toChangeCourse("PM");
+        s1.toChangeCourse("QA");
         /*
     static int totalStudents = 1;
 
