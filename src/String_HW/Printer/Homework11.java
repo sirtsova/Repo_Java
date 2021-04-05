@@ -23,6 +23,9 @@ public class Homework11 {
 
 
         public void print ( int pagesToPrint, boolean typeTrueForDoubleSided){
+        if(!typeTrueForDoubleSided){
+            print(pagesToPrint);
+        }
             if (pagesToPrint > paperInTray * 2) {
                 System.out.println("Not enough paper in the tray to print. Please add more paper and try again.");
             }

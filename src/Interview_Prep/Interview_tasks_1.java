@@ -1,5 +1,7 @@
 package Interview_Prep;
 
+import LabClass.Lab11;
+
 public class Interview_tasks_1 {
     public static void main(String[] args) {
     //Write a program to swap 2 numbers without a temporary variable
