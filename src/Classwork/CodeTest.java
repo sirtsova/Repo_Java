@@ -43,7 +43,8 @@ public class CodeTest {
                 j++;
             }
         }
-        return returnedArray;
+        intArray = returnedArray;
+        return intArray;
     }
 
 
