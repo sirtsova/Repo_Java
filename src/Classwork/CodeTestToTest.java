@@ -9,9 +9,9 @@ public class CodeTestToTest {
         CodeTest c1 = new CodeTest();
         c1.speedLimitPoints(130);
 
-        int[] numbers = {24,32,54,78,24,80,24,32,32,11,34};
+        int[] numbers = {24,32,54,78,24,80,24,32,32,34};
         System.out.println(Arrays.toString(numbers));
-        numbers = c1.removeNumberFromArray(numbers,32);
+        numbers = c1.removeNumberFromArray(numbers,11);
         System.out.println(Arrays.toString(numbers));
 
         int [] findSmallest = {0,5,-1,3,3,7,1,2,8,4};
