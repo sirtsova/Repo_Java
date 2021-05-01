@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Homework15 {
     public static void main(String[] args) {
-        Homework15.timeLine(6);
+        System.out.println(timeLine(6));
     }
 
     /**
@@ -25,18 +25,18 @@ public class Homework15 {
 
     // sout(generateTimeline(10));       // running the code around 8am
     // 8am 10am 12pm 2pm 4pm 6pm 8pm 10pm 12am 2am
-    public static void timeLine(int length) {
+    public static List<String> timeLine(int length) {
         Calendar cal = Calendar.getInstance();
         List<String> listDates = new ArrayList<>();
-        for (int i = 0; i < length * 2; i = +2) {
+        for (int i = 0; i < length * 2; i += 2) {
             if (listDates.size() < length) {
                 cal.add(Calendar.HOUR, i);
                 SimpleDateFormat df = new SimpleDateFormat("ha");
                 String formattedDate = df.format(cal.getTime());
                 listDates.add(formattedDate);
-                System.out.print(formattedDate + " ");
             }
         }
+        return listDates;
     }
 }
 
