@@ -17,36 +17,60 @@ public class LabTest {
         And -> 6 (bcz, upto index-6 i.e. {10, 64, 100, 6, 2, 55, 22} ; 10 and 64 are present equal number of times)
 
          */
+        System.out.println("\nCase 1:");
+        int x1 = 7;
+        int y1 = 42;
+        int[] arr1 = {6, 42, 11, 7, 1, 42};
+        System.out.println(findPrefix(x1,y1,arr1));
 
-        int x = 10;
-        int y = 64;
-        int[] arr = {10, 32, 100, 64, 2, 55, 22};
-        int count = 0;
-        int count2 =0;
-        int p = 0;
+        System.out.println("\nCase 2:");
+        int x2 = 6;
+        int y2 = 13;
+        int[] arr2 = {13, 13, 1, 6};
+        System.out.println(findPrefix(x2,y2,arr2));
 
-       for(int i=0;i< arr.length;i++) {
-           if (arr[i] == x) {
-               count++;
-               if (count == 2) {
-                   p = i-1;
-                   break;
-               }
-           }
-           if (arr[i] == y) {
-               count2++;
-               if (count2 == 2) {
-                   p = i-1;
-                   break;
-               }
-           }
-       }
+        System.out.println("\nCase 3:");
+        int x3 = 100;
+        int y3 = 63;
+        int[] arr3 = {100, 63, 100, 6, 2};
+        System.out.println(findPrefix(x3,y3,arr3));
 
-       if (p==0) {
-           p=-1;
-         } if(count==1 && count2==1) {
-           p = arr.length-1;
-        }
-        System.out.println(p);
+        System.out.println("\nCase 4:");
+        int x4 = 10;
+        int y4 = 64;
+        int[] arr4 = {10, 32, 100, 64, 2, 55, 22};
+        System.out.println(findPrefix(x4,y4,arr4));
+
     }
+        public static int findPrefix ( int x, int y, int[] arr) {
+            int count = 0;
+            int count2 = 0;
+            int p = 0;
+
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == x) {
+                    count++;
+                    if (count == 2) {
+                        p = i - 1;
+                        break;
+                    }
+                }
+                if (arr[i] == y) {
+                    count2++;
+                    if (count2 == 2) {
+                        p = i - 1;
+                        break;
+                    }
+                }
+            }
+
+            if (p == 0) {
+                p = -1;
+            }
+            if (count == 1 && count2 == 1) {
+                p = arr.length - 1;
+            }
+            return p;
+        }
+
 }
